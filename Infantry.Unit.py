@@ -15,8 +15,8 @@ class TacticalSquad(TroopChoice):
         unit_size = 10
         base_points = 100
         additional_points = 0
-        #self.nuncio_vox = bool
-        #self.legion_vexilla = bool
+        self.nuncio_vox = ''
+        self.legion_vexilla = ''
     pass
 
     # self.additional_points = int
@@ -30,13 +30,14 @@ class TacticalSquad(TroopChoice):
     #        additional_points +10
 
 
-NewUnit = TroopChoice('Jump Infantry', 'Assault Squad', 5, 100)
+NewUnit = TroopChoice('Jump Infantry', 'Assault Squad', 5, 100, 0)
 
 print(NewUnit.unit_type)
 print(NewUnit.name)
 print(NewUnit.base_points)
 print(NewUnit.unit_size)
+print(NewUnit.additional_points)
 
-First_Troops = TacticalSquad()
+First_Troops = TacticalSquad('Infantry', 'Tactical Squad', 10, 100, 0)
 
 print(First_Troops.unit_type)
